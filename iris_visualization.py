@@ -5,6 +5,12 @@ Spyder Editor
 This is a temporary script file.
 """
 
+'''
+利用PCA对IRIS数据库进行数据降维处理。
+PCA只是将整组数据整体映射到最方便表示这组数据的坐标轴上，映射时没有利用任何数据内部的分类信息，
+因此整组数据在表示上更加方便(降低了维数并将信息损失降到最低)，但在分类上也许会变得更加困难。
+'''
+
 import numpy as np
 from matplotlib import pyplot as plt
 from sklearn.datasets import load_iris
