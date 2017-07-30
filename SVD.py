@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Mar 15 17:19:10 2017
 
 @author: wilkenshuang
 """
