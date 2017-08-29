@@ -1,0 +1,51 @@
+'''
+问题描述：
+链接：https://www.nowcoder.com/questionTerminal/f3aaf8fedcea43c6b12a11710068726b
+来源：牛客网
+
+度度熊想去商场买一顶帽子，商场里有N顶帽子，有些帽子的价格可能相同。度度熊想买一顶价格第三便宜的帽子，问第三便宜的帽子价格是多少？ 
+输入描述:
+
+首先输入一个正整数N（N <= 50），接下来输入N个数表示每顶帽子的价格（价格均是正整数，且小于等于1000）
+
+
+输出描述:
+
+如果存在第三便宜的帽子，请输出这个价格是多少，否则输出-1
+'''
+#Solution 1:
+import sys
+number=sys.stdin.readline().strip()
+if float(number)>=3:
+    hats=sys.stdin.readline().strip()
+    hats=[int(i) for i in hats]
+    hats=hats.split()
+    hats.sort()
+    price={}
+    j=1
+    for i in hats:
+        if i not in price.values():
+            price[j]=i
+            j+=1
+    if len(price)>=3:
+        print(price[3])
+    else:
+        print(-1)
+else:
+    print(-1)
+
+#Solution 2
+import sys
+N=sys.stdin.readline()
+if float(N)<=3:
+    print(-1)
+else:
+    hats=sys.stdin.readline()
+    hats=hats.split()
+    tmp=map(int,hats)
+    Hats=list(tmp)
+    output=sorted(set(Hats))
+    if len(output)>=3:
+        print(output[2])
+    else:
+        print(-1)
