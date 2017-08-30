@@ -18,8 +18,8 @@ import sys
 number=sys.stdin.readline().strip()
 if float(number)>=3:
     hats=sys.stdin.readline().strip()
-    hats=[int(i) for i in hats]
     hats=hats.split()
+    hats=[int(i) for i in hats]
     hats.sort()
     price={}
     j=1
