@@ -19,14 +19,16 @@ def quickSort(list):
         pivot=list[0]
         subLeft,subRight=[],[]
         for i in list[1:]:
-            if i<pivot:
+            if i<=pivot:
                 subLeft.append(i)
             else:
                 subRight.append(i)
-        if subLeft==[] or len(subLeft)==1:
+        if len(subLeft)<=1:
             return subLeft + [pivot] +quickSort(subRight)
-        elif subRight==[] or len(subRight)==1:
+        elif len(subRight)<=1:
             return quickSort(subLeft) + [pivot] + subRight
         else:
             return quickSort(subLeft) + [pivot] + quickSort(subRight)
+        
 print(quickSort([99,43,56,21,19,77]))
+print(quickSort([1,4,1,2,9,5,2]))
