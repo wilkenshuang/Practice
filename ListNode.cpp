@@ -7,14 +7,6 @@
 #include<stack>
 
 using namespace std;
-template<class T>
-struct BSNode
-{
-	T value	;
-	BSNode<T> *parent, *lnode, *rnode;
-	BSNode(T t) :value(t), lchild(nullptr), rchild(nullptr){}
-	BSNode() = default;
-};
 
 typedef struct stu{
 	int age;
